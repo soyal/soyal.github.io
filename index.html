@@ -248,6 +248,128 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/20/对line-height的解读/" itemprop="url">
+                  对line-height的解读
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-20T16:48:20+08:00" content="2016-08-20">
+              2016-08-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端知识点/" itemprop="url" rel="index">
+                    <span itemprop="name">前端知识点</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="对line-height的解读"><a href="#对line-height的解读" class="headerlink" title="对line-height的解读"></a>对line-height的解读</h1><h2 id="什么是line-height"><a href="#什么是line-height" class="headerlink" title="什么是line-height"></a>什么是line-height</h2><p>在了解什么是行高line-height之前，我们必须了解一些概念，请看下图<br><img src="/img/2016-8/line.png" alt=""><br>图上从上之下，分别是顶线，中线，基线，底线，顺带一提<br>，这四条线也分别对应vertical-align的四个值,top,middle,baseline,bottom<br>而行高，指的就是两段文本上下基线间的距离</p>
+<h2 id="line-height的取值"><a href="#line-height的取值" class="headerlink" title="line-height的取值"></a>line-height的取值</h2><p>line-height有五种取值，分别为inherit,normal,百分比,固定值,纯数字</p>
+<h3 id="inherit"><a href="#inherit" class="headerlink" title="inherit"></a>inherit</h3><p>继承的方式，没什么好讲的</p>
+<h3 id="normal"><a href="#normal" class="headerlink" title="normal"></a>normal</h3><p>基本等于设置为1.2</p>
+<h3 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h3><p>这里需要重点关注一下，百分比取值需要和纯数字取值仔细区别。<br>这里的百分比，是指的与元素font-size的百分比，当元素line-height设置为百分比时，元素的line-height就等于当前fon-size与这个百分比的乘积，并且，这个计算出的值还将被后代元素所继承，举个例子<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">30px</span>;</div><div class="line">    <span class="attribute">line-height</span>:<span class="number">150%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>按照上面的设置，body的line-height为30*150%=45px,并且body的后代，也就是全局元素的line-height都将为45px</p>
+<h3 id="固定值"><a href="#固定值" class="headerlink" title="固定值"></a>固定值</h3><p>固定值就是设置为固定的像素，并且会被后代继承</p>
+<h3 id="纯数字"><a href="#纯数字" class="headerlink" title="纯数字"></a>纯数字</h3><p>纯数字与百分比很像，但是被后代继承的只有系数，而不是一个固定值<br>举例<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">font-size </span>: <span class="number">30px</span>;</div><div class="line">    <span class="attribute">line-height</span>:<span class="number">1.5</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面例子中，body的line-height为30*1.5=45px，然后其后代元素，将会继承1.5这个系数，也就是后代元素的line-height将会是自身font-size与1.5的乘积</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>综上，一般情况，设置line-height应该优先考虑纯数字，优点是具有自适应的特性</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/20/图片文字上下居中统一解决方案/" itemprop="url">
                   图片文字上下居中统一解决方案
                 </a>
@@ -312,7 +434,7 @@
         
           
             <h1 id="图片文字上下居中的统一解决方案"><a href="#图片文字上下居中的统一解决方案" class="headerlink" title="图片文字上下居中的统一解决方案"></a>图片文字上下居中的统一解决方案</h1><h2 id="先上方案"><a href="#先上方案" class="headerlink" title="先上方案"></a>先上方案</h2><p>html代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span>上下居中的内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>css代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table-cell;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child</span>&#123;</div><div class="line">    <span class="attribute">display</span>:inline-block;<span class="comment">/*|| inline*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>css代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table-cell;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child</span>&#123;</div><div class="line">    <span class="attribute">display</span>:inline-block;<span class="comment">/*|| inline*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>其中，.child可以是div,img,p,从而实现图片和多行文字的上下居中，但是注意父元素的高度一定要是已知的，如果父元素是被其他子元素撑开的，此方案无效</p>
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>这种方案需要尽可能保证table-cell的父元素只拥有单一的子元素，否则可能会因为子元素的相互干扰，造成垂直居中失败</p>
 
@@ -499,7 +621,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -507,7 +629,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
