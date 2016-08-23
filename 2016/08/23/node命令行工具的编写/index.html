@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="其他,杂谈," />
+  <meta name="keywords" content="nodejs," />
 
 
 
@@ -84,24 +84,19 @@
 
 
 
-<meta name="description" content="搭建完hexo+next折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  
-先写段代码看看效果123456function hello()&amp;#123;    console.log(&quot;hello world&quot;);&amp;#125;hello();//it&apos;s fine
-再来张图片">
+<meta name="description" content="node命令行工具的编写在node里面编写命令行工具是非常简单的，其实主要就是两步，首先在package.json中添加”bin”,然后全局安装。下面以一个简单的test命令为例，写一下node命令行工具编写的步骤，这个命令很简单，就是输出一句话。
+创建目录首先是创建我们的项目目录，创建一个test目录，在test目录下npm init 一个package.json文件，然后再新建一个bin目录，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello world">
-<meta property="og:url" content="http://yoursite.com/2016/08/20/hello-world/index.html">
+<meta property="og:title" content="node命令行工具的编写">
+<meta property="og:url" content="http://yoursite.com/2016/08/23/node命令行工具的编写/index.html">
 <meta property="og:site_name" content="Show me Code">
-<meta property="og:description" content="搭建完hexo+next折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  
-先写段代码看看效果123456function hello()&amp;#123;    console.log(&quot;hello world&quot;);&amp;#125;hello();//it&apos;s fine
-再来张图片">
-<meta property="og:image" content="http://yoursite.com/img/hello-world/test.jpg">
-<meta property="og:updated_time" content="2016-08-20T07:00:06.040Z">
+<meta property="og:description" content="node命令行工具的编写在node里面编写命令行工具是非常简单的，其实主要就是两步，首先在package.json中添加”bin”,然后全局安装。下面以一个简单的test命令为例，写一下node命令行工具编写的步骤，这个命令很简单，就是输出一句话。
+创建目录首先是创建我们的项目目录，创建一个test目录，在test目录下npm init 一个package.json文件，然后再新建一个bin目录，">
+<meta property="og:updated_time" content="2016-08-23T02:21:02.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello world">
-<meta name="twitter:description" content="搭建完hexo+next折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  
-先写段代码看看效果123456function hello()&amp;#123;    console.log(&quot;hello world&quot;);&amp;#125;hello();//it&apos;s fine
-再来张图片">
-<meta name="twitter:image" content="http://yoursite.com/img/hello-world/test.jpg">
+<meta name="twitter:title" content="node命令行工具的编写">
+<meta name="twitter:description" content="node命令行工具的编写在node里面编写命令行工具是非常简单的，其实主要就是两步，首先在package.json中添加”bin”,然后全局安装。下面以一个简单的test命令为例，写一下node命令行工具编写的步骤，这个命令很简单，就是输出一句话。
+创建目录首先是创建我们的项目目录，创建一个test目录，在test目录下npm init 一个package.json文件，然后再新建一个bin目录，">
 
 
 
@@ -122,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/20/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/23/node命令行工具的编写/"/>
 
-  <title> hello world | Show me Code </title>
+  <title> node命令行工具的编写 | Show me Code </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +249,7 @@
             
             
               
-                hello world
+                node命令行工具的编写
               
             
           </h1>
@@ -266,8 +261,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-20T14:07:09+08:00" content="2016-08-20">
-              2016-08-20
+            <time itemprop="dateCreated" datetime="2016-08-23T09:52:55+08:00" content="2016-08-23">
+              2016-08-23
             </time>
           </span>
 
@@ -280,8 +275,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
                   </a>
                 </span>
 
@@ -313,9 +308,14 @@
       
 
       
-        <h2 id="搭建完hexo-next"><a href="#搭建完hexo-next" class="headerlink" title="搭建完hexo+next"></a>搭建完hexo+next</h2><p>折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  </p>
-<h2 id="先写段代码看看效果"><a href="#先写段代码看看效果" class="headerlink" title="先写段代码看看效果"></a>先写段代码看看效果</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"hello world"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">hello();</div><div class="line"><span class="comment">//it's fine</span></div></pre></td></tr></table></figure>
-<h2 id="再来张图片"><a href="#再来张图片" class="headerlink" title="再来张图片"></a>再来张图片</h2><p><img src="/img/hello-world/test.jpg" alt="测试用图片"></p>
+        <h1 id="node命令行工具的编写"><a href="#node命令行工具的编写" class="headerlink" title="node命令行工具的编写"></a>node命令行工具的编写</h1><p>在node里面编写命令行工具是非常简单的，其实主要就是两步，首先在package.json中添加”bin”,然后全局安装。<br>下面以一个简单的test命令为例，写一下node命令行工具编写的步骤，这个命令很简单，就是输出一句话。</p>
+<h2 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h2><p>首先是创建我们的项目目录，创建一个test目录，在test目录下npm init 一个package.json文件，然后再新建一个bin目录，在bin里面创建test.js文件，创建结束后，目录结构如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">--test</div><div class="line">    --bin</div><div class="line">        --test.js</div><div class="line">    --package.json</div></pre></td></tr></table></figure></p>
+<h2 id="编写test-js"><a href="#编写test-js" class="headerlink" title="编写test.js"></a>编写test.js</h2><p>上面说了，test.js里面的功能就是输出一段话，那么我们打印一句话就可以了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">"this is a command test"</span>);</div></pre></td></tr></table></figure></p>
+<h2 id="在package-json中添加bin信息"><a href="#在package-json中添加bin信息" class="headerlink" title="在package.json中添加bin信息"></a>在package.json中添加bin信息</h2><p>这是我package.json中的内容，主要是注意bin字段<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"test"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="attr">"bin"</span> : &#123;</div><div class="line">    <span class="attr">"test"</span>:<span class="string">"bin/test.js"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>添加了bin字段之后，test命令就会被映射到bin/test.js</p>
+<h2 id="安装到全局"><a href="#安装到全局" class="headerlink" title="安装到全局"></a>安装到全局</h2><p>目前这个命令还是无效的，需要我们将这个程序安装到全局<br>在test目录下执行<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> install . -g</div></pre></td></tr></table></figure></p>
+<p>之后命令行会提示相应的成功信息  </p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在执行完上述步骤之后，我们的命令行工具已经完成了，现在任意目录调出cmd，输入test就会在cmd中打印”this is a command test”<br>需要注意的是，在测试完后如果想要卸载对应的模块，输入<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> uninstall test -g</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -338,9 +338,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/其他/" rel="tag">#其他</a>
-          
-            <a href="/tags/杂谈/" rel="tag">#杂谈</a>
+            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
           
         </div>
       
@@ -349,13 +347,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/20/对line-height的解读/" rel="next" title="对line-height的解读">
+                <i class="fa fa-chevron-left"></i> 对line-height的解读
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/20/图片文字上下居中统一解决方案/" rel="prev" title="图片文字上下居中统一解决方案">
-                图片文字上下居中统一解决方案 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,7 +467,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建完hexo-next"><span class="nav-number">1.</span> <span class="nav-text">搭建完hexo+next</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先写段代码看看效果"><span class="nav-number">2.</span> <span class="nav-text">先写段代码看看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#再来张图片"><span class="nav-number">3.</span> <span class="nav-text">再来张图片</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#node命令行工具的编写"><span class="nav-number">1.</span> <span class="nav-text">node命令行工具的编写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建目录"><span class="nav-number">1.1.</span> <span class="nav-text">创建目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写test-js"><span class="nav-number">1.2.</span> <span class="nav-text">编写test.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在package-json中添加bin信息"><span class="nav-number">1.3.</span> <span class="nav-text">在package.json中添加bin信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装到全局"><span class="nav-number">1.4.</span> <span class="nav-text">安装到全局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
