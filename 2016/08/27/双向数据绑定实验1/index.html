@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="要努力啊，少年~~~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Show me Code">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="双向数据绑定实验1一直都对数据的双向绑定有疑惑，不知道是怎么实现的，昨天查了下资料，发现angular是用的脏数据监测，这个比较复杂，一时半会说不清楚，而vue使用的是es5的api，Object.defineProperty，这个就比较好理解了，所以这次打算模仿vue写一个双向绑定的例子来玩玩。
+调用方法1234&amp;lt;!--html--&amp;gt;&amp;lt;input type=&quot;text&quot; v-m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="双向数据绑定实验1">
+<meta property="og:url" content="http://yoursite.com/2016/08/27/双向数据绑定实验1/index.html">
 <meta property="og:site_name" content="Show me Code">
-<meta property="og:description" content="要努力啊，少年~~~">
+<meta property="og:description" content="双向数据绑定实验1一直都对数据的双向绑定有疑惑，不知道是怎么实现的，昨天查了下资料，发现angular是用的脏数据监测，这个比较复杂，一时半会说不清楚，而vue使用的是es5的api，Object.defineProperty，这个就比较好理解了，所以这次打算模仿vue写一个双向绑定的例子来玩玩。
+调用方法1234&amp;lt;!--html--&amp;gt;&amp;lt;input type=&quot;text&quot; v-m">
+<meta property="og:updated_time" content="2016-08-27T03:26:38.754Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Show me Code">
-<meta name="twitter:description" content="要努力啊，少年~~~">
+<meta name="twitter:title" content="双向数据绑定实验1">
+<meta name="twitter:description" content="双向数据绑定实验1一直都对数据的双向绑定有疑惑，不知道是怎么实现的，昨天查了下资料，发现angular是用的脏数据监测，这个比较复杂，一时半会说不清楚，而vue使用的是es5的api，Object.defineProperty，这个就比较好理解了，所以这次打算模仿vue写一个双向绑定的例子来玩玩。
+调用方法1234&amp;lt;!--html--&amp;gt;&amp;lt;input type=&quot;text&quot; v-m">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/27/双向数据绑定实验1/"/>
 
-  <title> Show me Code </title>
+  <title> 双向数据绑定实验1 | Show me Code </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,9 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -225,9 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -247,10 +249,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/08/27/双向数据绑定实验1/" itemprop="url">
-                  双向数据绑定实验1
-                </a>
+                双向数据绑定实验1
               
             
           </h1>
@@ -309,9 +308,7 @@
       
 
       
-        
-          
-            <h1 id="双向数据绑定实验1"><a href="#双向数据绑定实验1" class="headerlink" title="双向数据绑定实验1"></a>双向数据绑定实验1</h1><p>一直都对数据的双向绑定有疑惑，不知道是怎么实现的，昨天查了下资料，发现angular是用的脏数据监测，这个比较复杂，一时半会说不清楚，而vue使用的是es5的api，Object.defineProperty，这个就比较好理解了，所以这次打算模仿vue写一个双向绑定的例子来玩玩。</p>
+        <h1 id="双向数据绑定实验1"><a href="#双向数据绑定实验1" class="headerlink" title="双向数据绑定实验1"></a>双向数据绑定实验1</h1><p>一直都对数据的双向绑定有疑惑，不知道是怎么实现的，昨天查了下资料，发现angular是用的脏数据监测，这个比较复杂，一时半会说不清楚，而vue使用的是es5的api，Object.defineProperty，这个就比较好理解了，所以这次打算模仿vue写一个双向绑定的例子来玩玩。</p>
 <h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--html--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"test1"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"test1"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"test2"</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//js</span></div><div class="line"><span class="keyword">var</span> vie = <span class="keyword">new</span> Vie(&#123;</div><div class="line">    data : &#123;</div><div class="line">        test1 : <span class="string">"this is test1"</span>,</div><div class="line">        test2 : <span class="string">"test2 is this"</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Vie</span>(<span class="params">ops</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.data = &#123;&#125;;</div><div class="line">    <span class="keyword">this</span>.domModel = &#123;&#125;;</div><div class="line">    <span class="keyword">this</span>._watchFn = [];</div><div class="line">    <span class="keyword">this</span>.__init(ops.data);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -322,509 +319,59 @@
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个双向绑定的测试程序的执行思路：<br>遍历v-model找到对应的dom节点 ==&gt;  对每个data字段设置监听，如果data字段在后台改变，会更新绑定了相应data字段的v-model ==&gt; 对所有的v-model的keyup设置监听  </p>
 <p>总之，这是一个简陋版本的双向绑定，并且只能绑定input，暂时不知道类似angular和vue的这种写法怎么实现绑定，还需要再研究研究</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/23/node命令行工具的编写/" itemprop="url">
-                  node命令行工具的编写
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-23T09:52:55+08:00" content="2016-08-23">
-              2016-08-23
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">Node.js</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="node命令行工具的编写"><a href="#node命令行工具的编写" class="headerlink" title="node命令行工具的编写"></a>node命令行工具的编写</h1><p>在node里面编写命令行工具是非常简单的，其实主要就是两步，首先在package.json中添加”bin”,然后全局安装。<br>下面以一个简单的test命令为例，写一下node命令行工具编写的步骤，这个命令很简单，就是输出一句话。</p>
-<h2 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h2><p>首先是创建我们的项目目录，创建一个test目录，在test目录下npm init 一个package.json文件，然后再新建一个bin目录，在bin里面创建test.js文件，创建结束后，目录结构如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">--test</div><div class="line">    --bin</div><div class="line">        --test.js</div><div class="line">    --package.json</div></pre></td></tr></table></figure></p>
-<h2 id="编写test-js"><a href="#编写test-js" class="headerlink" title="编写test.js"></a>编写test.js</h2><p>上面说了，test.js里面的功能就是输出一段话，那么我们打印一句话就可以了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">"this is a command test"</span>);</div></pre></td></tr></table></figure></p>
-<h2 id="在package-json中添加bin信息"><a href="#在package-json中添加bin信息" class="headerlink" title="在package.json中添加bin信息"></a>在package.json中添加bin信息</h2><p>这是我package.json中的内容，主要是注意bin字段<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"test"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="attr">"bin"</span> : &#123;</div><div class="line">    <span class="attr">"test"</span>:<span class="string">"bin/test.js"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>添加了bin字段之后，test命令就会被映射到bin/test.js</p>
-<h2 id="安装到全局"><a href="#安装到全局" class="headerlink" title="安装到全局"></a>安装到全局</h2><p>目前这个命令还是无效的，需要我们将这个程序安装到全局<br>在test目录下执行<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> install . -g</div></pre></td></tr></table></figure></p>
-<p>之后命令行会提示相应的成功信息  </p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在执行完上述步骤之后，我们的命令行工具已经完成了，现在任意目录调出cmd，输入test就会在cmd中打印”this is a command test”<br>需要注意的是，在测试完后如果想要卸载对应的模块，输入<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> uninstall test -g</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/23/node命令行工具的编写/" rel="next" title="node命令行工具的编写">
+                <i class="fa fa-chevron-left"></i> node命令行工具的编写
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/08/20/对line-height的解读/" itemprop="url">
-                  对line-height的解读
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-20T16:48:20+08:00" content="2016-08-20">
-              2016-08-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端知识点/" itemprop="url" rel="index">
-                    <span itemprop="name">前端知识点</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="对line-height的解读"><a href="#对line-height的解读" class="headerlink" title="对line-height的解读"></a>对line-height的解读</h1><h2 id="什么是line-height"><a href="#什么是line-height" class="headerlink" title="什么是line-height"></a>什么是line-height</h2><p>在了解什么是行高line-height之前，我们必须了解一些概念，请看下图<br><img src="/img/2016-8/line.png" alt=""><br>图上从上之下，分别是顶线，中线，基线，底线，顺带一提<br>，这四条线也分别对应vertical-align的四个值,top,middle,baseline,bottom<br>而行高，指的就是两段文本上下基线间的距离</p>
-<h2 id="line-height的取值"><a href="#line-height的取值" class="headerlink" title="line-height的取值"></a>line-height的取值</h2><p>line-height有五种取值，分别为inherit,normal,百分比,固定值,纯数字</p>
-<h3 id="inherit"><a href="#inherit" class="headerlink" title="inherit"></a>inherit</h3><p>继承的方式，没什么好讲的</p>
-<h3 id="normal"><a href="#normal" class="headerlink" title="normal"></a>normal</h3><p>基本等于设置为1.2</p>
-<h3 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h3><p>这里需要重点关注一下，百分比取值需要和纯数字取值仔细区别。<br>这里的百分比，是指的与元素font-size的百分比，当元素line-height设置为百分比时，元素的line-height就等于当前fon-size与这个百分比的乘积，并且，这个计算出的值还将被后代元素所继承，举个例子<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">30px</span>;</div><div class="line">    <span class="attribute">line-height</span>:<span class="number">150%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>按照上面的设置，body的line-height为30*150%=45px,并且body的后代，也就是全局元素的line-height都将为45px</p>
-<h3 id="固定值"><a href="#固定值" class="headerlink" title="固定值"></a>固定值</h3><p>固定值就是设置为固定的像素，并且会被后代继承</p>
-<h3 id="纯数字"><a href="#纯数字" class="headerlink" title="纯数字"></a>纯数字</h3><p>纯数字与百分比很像，但是被后代继承的只有系数，而不是一个固定值<br>举例<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="attribute">font-size </span>: <span class="number">30px</span>;</div><div class="line">    <span class="attribute">line-height</span>:<span class="number">1.5</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>上面例子中，body的line-height为30*1.5=45px，然后其后代元素，将会继承1.5这个系数，也就是后代元素的line-height将会是自身font-size与1.5的乘积</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>综上，一般情况，设置line-height应该优先考虑纯数字，优点是具有自适应的特性</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/20/图片文字上下居中统一解决方案/" itemprop="url">
-                  图片文字上下居中统一解决方案
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-20T15:47:46+08:00" content="2016-08-20">
-              2016-08-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端技巧/" itemprop="url" rel="index">
-                    <span itemprop="name">前端技巧</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="图片文字上下居中的统一解决方案"><a href="#图片文字上下居中的统一解决方案" class="headerlink" title="图片文字上下居中的统一解决方案"></a>图片文字上下居中的统一解决方案</h1><h2 id="先上方案"><a href="#先上方案" class="headerlink" title="先上方案"></a>先上方案</h2><p>html代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span>上下居中的内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>css代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table-cell;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child</span>&#123;</div><div class="line">    <span class="attribute">display</span>:inline-block;<span class="comment">/*|| inline*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>其中，.child可以是div,img,p,从而实现图片和多行文字的上下居中，但是注意父元素的高度一定要是已知的，如果父元素是被其他子元素撑开的，此方案无效</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>这种方案需要尽可能保证table-cell的父元素只拥有单一的子元素，否则可能会因为子元素的相互干扰，造成垂直居中失败</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/20/hello-world/" itemprop="url">
-                  hello world
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-20T14:07:09+08:00" content="2016-08-20">
-              2016-08-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="搭建完hexo-next"><a href="#搭建完hexo-next" class="headerlink" title="搭建完hexo+next"></a>搭建完hexo+next</h2><p>折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  </p>
-<h2 id="先写段代码看看效果"><a href="#先写段代码看看效果" class="headerlink" title="先写段代码看看效果"></a>先写段代码看看效果</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"hello world"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">hello();</div><div class="line"><span class="comment">//it's fine</span></div></pre></td></tr></table></figure>
-<h2 id="再来张图片"><a href="#再来张图片" class="headerlink" title="再来张图片"></a>再来张图片</h2><p><img src="/img/hello-world/test.jpg" alt="测试用图片"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -832,6 +379,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -851,8 +402,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -902,6 +462,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#双向数据绑定实验1"><span class="nav-number">1.</span> <span class="nav-text">双向数据绑定实验1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调用方法"><span class="nav-number">1.1.</span> <span class="nav-text">调用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造函数"><span class="nav-number">1.2.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例方法"><span class="nav-number">1.3.</span> <span class="nav-text">实例方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用于初始化的函数-init"><span class="nav-number">1.3.1.</span> <span class="nav-text">用于初始化的函数 __init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用于定义属性，并在属性发生改变时执行notify"><span class="nav-number">1.3.2.</span> <span class="nav-text">用于定义属性，并在属性发生改变时执行notify</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用于监听数据变化，并将数据变化时的操作推入数据中"><span class="nav-number">1.3.3.</span> <span class="nav-text">用于监听数据变化，并将数据变化时的操作推入数据中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应数据变化，并执行响应的操作"><span class="nav-number">1.3.4.</span> <span class="nav-text">响应数据变化，并执行响应的操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -998,6 +569,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
