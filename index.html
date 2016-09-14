@@ -248,6 +248,124 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/14/编写chrome插件/" itemprop="url">
+                  编写chrome插件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-14T15:15:04+08:00" content="2016-09-14">
+              2016-09-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端技巧/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技巧</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="编写浏览器插件"><a href="#编写浏览器插件" class="headerlink" title="编写浏览器插件"></a>编写浏览器插件</h1><h2 id="manifest-json"><a href="#manifest-json" class="headerlink" title="manifest.json"></a>manifest.json</h2><p>chrome插件的配置文件，也是最重要的一部分，下面附上我编写的第一个插件的配置信息<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"第一个Chrome插件"</span>,</div><div class="line">  <span class="attr">"manifest_version"</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">"我的第一个Chrome插件，还不错吧"</span>,</div><div class="line">  <span class="attr">"browser_action"</span>: &#123;   </div><div class="line">    <span class="attr">"default_icon"</span>: <span class="string">"health.png"</span></div><div class="line">  &#125;,</div><div class="line"><span class="attr">"content_scripts"</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"matches"</span>: [<span class="string">"https://www.baidu.com/*"</span>],</div><div class="line">      <span class="attr">"js"</span>: [<span class="string">"myscript.js"</span>]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>第一个{}里面的信息就不解释了，主要是content_scripts属性的内容，这个属性是一个array，可以填入多个object，object中matches对应的是域名，js是要执行的脚本文件</p>
+<h2 id="放入Icon"><a href="#放入Icon" class="headerlink" title="放入Icon"></a>放入Icon</h2><p>随便放一张图片在manifest.json的同级目录下并命名为health.png，这个将作为浏览器url右侧的图标图片</p>
+<h2 id="放入js文件"><a href="#放入js文件" class="headerlink" title="放入js文件"></a>放入js文件</h2><p>编写一个js文件，命名为myscript.js，这段Js将会在对应的域名下执行，比如我这里编写这样一段js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert(<span class="string">"这是我自己的插件"</span>);</div><div class="line"><span class="built_in">document</span>.body.style.backgroundColor = <span class="string">"#666"</span>;</div></pre></td></tr></table></figure></p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>在chrome浏览器中安装自己的插件后，打开百度，效果如图:<br><img src="/img/2016-9/extension_1.png" alt=""><br><img src="/img/2016-9/extension_2.png" alt=""></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>编写浏览器插件的步骤挺简单的，感觉自己也能去抢月饼了呢~（活着不好吗！喂！）</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/27/双向数据绑定实验1/" itemprop="url">
                   双向数据绑定实验1
                 </a>
@@ -794,6 +912,7 @@
             <h2 id="搭建完hexo-next"><a href="#搭建完hexo-next" class="headerlink" title="搭建完hexo+next"></a>搭建完hexo+next</h2><p>折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  </p>
 <h2 id="先写段代码看看效果"><a href="#先写段代码看看效果" class="headerlink" title="先写段代码看看效果"></a>先写段代码看看效果</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"hello world"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">hello();</div><div class="line"><span class="comment">//it's fine</span></div></pre></td></tr></table></figure>
 <h2 id="再来张图片"><a href="#再来张图片" class="headerlink" title="再来张图片"></a>再来张图片</h2><p><img src="/img/hello-world/test.jpg" alt="测试用图片"></p>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g      //将md编译为html css js</div><div class="line">hexo deploy //将public中的内容发布到服务器</div></pre></td></tr></table></figure>
 
           
         
@@ -863,7 +982,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -880,7 +999,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
