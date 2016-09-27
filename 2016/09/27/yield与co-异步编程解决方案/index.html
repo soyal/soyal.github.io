@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="其他,杂谈," />
+  <meta name="keywords" content="javascript,nodejs," />
 
 
 
@@ -84,27 +84,16 @@
 
 
 
-<meta name="description" content="搭建完hexo+next折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  
-先写段代码看看效果123456function hello()&amp;#123;    console.log(&quot;hello world&quot;);&amp;#125;hello();//it&apos;s fine
-再来张图片
-发布12hexo g      //将md编译为html c">
+<meta name="description" content="yield与co,异步编程解决方案yield简述yield是es6中新出现的东西，对JS来说可能是新鲜货，但是在其他语言中貌似已经被用烂了。简单来说,yield就是类似函数执行时候的断点，每次函数执行到yield关键字的时候就会卡住，只有调用next方法后，函数才会继续执行，并且next会返回一个对象，包含了一个value和一个done，指示函数是否执行完毕，并返回yield后面的值。上栗子。12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello world">
-<meta property="og:url" content="http://yoursite.com/2016/08/20/hello-world/index.html">
+<meta property="og:title" content="yield与co,异步编程解决方案">
+<meta property="og:url" content="http://yoursite.com/2016/09/27/yield与co-异步编程解决方案/index.html">
 <meta property="og:site_name" content="Show me Code">
-<meta property="og:description" content="搭建完hexo+next折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  
-先写段代码看看效果123456function hello()&amp;#123;    console.log(&quot;hello world&quot;);&amp;#125;hello();//it&apos;s fine
-再来张图片
-发布12hexo g      //将md编译为html c">
-<meta property="og:image" content="http://yoursite.com/img/hello-world/test.jpg">
-<meta property="og:updated_time" content="2016-09-14T07:37:07.497Z">
+<meta property="og:description" content="yield与co,异步编程解决方案yield简述yield是es6中新出现的东西，对JS来说可能是新鲜货，但是在其他语言中貌似已经被用烂了。简单来说,yield就是类似函数执行时候的断点，每次函数执行到yield关键字的时候就会卡住，只有调用next方法后，函数才会继续执行，并且next会返回一个对象，包含了一个value和一个done，指示函数是否执行完毕，并返回yield后面的值。上栗子。12">
+<meta property="og:updated_time" content="2016-09-27T13:07:45.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello world">
-<meta name="twitter:description" content="搭建完hexo+next折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  
-先写段代码看看效果123456function hello()&amp;#123;    console.log(&quot;hello world&quot;);&amp;#125;hello();//it&apos;s fine
-再来张图片
-发布12hexo g      //将md编译为html c">
-<meta name="twitter:image" content="http://yoursite.com/img/hello-world/test.jpg">
+<meta name="twitter:title" content="yield与co,异步编程解决方案">
+<meta name="twitter:description" content="yield与co,异步编程解决方案yield简述yield是es6中新出现的东西，对JS来说可能是新鲜货，但是在其他语言中貌似已经被用烂了。简单来说,yield就是类似函数执行时候的断点，每次函数执行到yield关键字的时候就会卡住，只有调用next方法后，函数才会继续执行，并且next会返回一个对象，包含了一个value和一个done，指示函数是否执行完毕，并返回yield后面的值。上栗子。12">
 
 
 
@@ -125,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/20/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/09/27/yield与co-异步编程解决方案/"/>
 
-  <title> hello world | Show me Code </title>
+  <title> yield与co,异步编程解决方案 | Show me Code </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -257,7 +246,7 @@
             
             
               
-                hello world
+                yield与co,异步编程解决方案
               
             
           </h1>
@@ -269,8 +258,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-20T14:07:09+08:00" content="2016-08-20">
-              2016-08-20
+            <time itemprop="dateCreated" datetime="2016-09-27T20:41:39+08:00" content="2016-09-27">
+              2016-09-27
             </time>
           </span>
 
@@ -283,8 +272,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/前端知识点/" itemprop="url" rel="index">
+                    <span itemprop="name">前端知识点</span>
                   </a>
                 </span>
 
@@ -316,10 +305,11 @@
       
 
       
-        <h2 id="搭建完hexo-next"><a href="#搭建完hexo-next" class="headerlink" title="搭建完hexo+next"></a>搭建完hexo+next</h2><p>折腾了半天，算是终于搭建好了博客的环境，接下来我会把我日常的一些知识点断断续续的总结上来，希望会有所收获，呼~  </p>
-<h2 id="先写段代码看看效果"><a href="#先写段代码看看效果" class="headerlink" title="先写段代码看看效果"></a>先写段代码看看效果</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"hello world"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">hello();</div><div class="line"><span class="comment">//it's fine</span></div></pre></td></tr></table></figure>
-<h2 id="再来张图片"><a href="#再来张图片" class="headerlink" title="再来张图片"></a>再来张图片</h2><p><img src="/img/hello-world/test.jpg" alt="测试用图片"></p>
-<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g      //将md编译为html css js</div><div class="line">hexo deploy //将public中的内容发布到服务器</div></pre></td></tr></table></figure>
+        <h1 id="yield与co-异步编程解决方案"><a href="#yield与co-异步编程解决方案" class="headerlink" title="yield与co,异步编程解决方案"></a>yield与co,异步编程解决方案</h1><h2 id="yield简述"><a href="#yield简述" class="headerlink" title="yield简述"></a>yield简述</h2><p>yield是es6中新出现的东西，对JS来说可能是新鲜货，但是在其他语言中貌似已经被用烂了。<br>简单来说,yield就是类似函数执行时候的断点，每次函数执行到yield关键字的时候就会卡住，只有调用next方法后，函数才会继续执行，并且next会返回一个对象，包含了一个value和一个done，指示函数是否执行完毕，并返回yield后面的值。<br>上栗子。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">yield</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">yield</span> <span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">3</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> it = test();</div><div class="line">it.next();  <span class="comment">//&#123;value:1,done:false&#125;</span></div><div class="line">it.next();  <span class="comment">//&#123;value:2,done:false&#125;</span></div><div class="line">it.next();  <span class="comment">//&#123;value:3,done:true&#125;</span></div></pre></td></tr></table></figure></p>
+<p>如果在next中传值，传入的值会被当做上一个yield的返回值，举例<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">test2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="keyword">yield</span> <span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> it = test2();</div><div class="line">it.next().value;  <span class="comment">//2</span></div><div class="line">it.next(<span class="number">99</span>).value;    <span class="comment">//99</span></div></pre></td></tr></table></figure></p>
+<p>不过，这次yield并不是我们要讲的主角，我们的主角是下面这位同学。</p>
+<h2 id="co模块简述"><a href="#co模块简述" class="headerlink" title="co模块简述"></a>co模块简述</h2><p>co是基于yield的一个node模块，利用yield每次next都会弹出一个值的特性，实现了一套异步编程解决方案，原理性代码展示如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">co</span>(<span class="params">gen</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> it = gen();</div><div class="line">    <span class="keyword">var</span> next = it.next();</div><div class="line">    next.value.then(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">        it.next(val);    </div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>可以看出，原理并不复杂，就是让yield next弹出一个Promise，然后在这个promise的异步操作完成后再次next，让函数继续向下执行，这样，我们在编写程序的时候就可以实现异步逻辑，同步实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">xx</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> result1 = <span class="keyword">yield</span> <span class="built_in">Promise</span>.resolve(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//异步操作1</span></div><div class="line">    &#125;);</div><div class="line">    <span class="keyword">var</span> result2 = result1 * <span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> result2;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -342,9 +332,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/其他/" rel="tag">#其他</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
-            <a href="/tags/杂谈/" rel="tag">#杂谈</a>
+            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
           
         </div>
       
@@ -353,13 +343,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/09/14/编写chrome插件/" rel="next" title="编写chrome插件">
+                <i class="fa fa-chevron-left"></i> 编写chrome插件
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/20/图片文字上下居中统一解决方案/" rel="prev" title="图片文字上下居中统一解决方案">
-                图片文字上下居中统一解决方案 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,7 +463,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建完hexo-next"><span class="nav-number">1.</span> <span class="nav-text">搭建完hexo+next</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先写段代码看看效果"><span class="nav-number">2.</span> <span class="nav-text">先写段代码看看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#再来张图片"><span class="nav-number">3.</span> <span class="nav-text">再来张图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布"><span class="nav-number">4.</span> <span class="nav-text">发布</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#yield与co-异步编程解决方案"><span class="nav-number">1.</span> <span class="nav-text">yield与co,异步编程解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#yield简述"><span class="nav-number">1.1.</span> <span class="nav-text">yield简述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#co模块简述"><span class="nav-number">1.2.</span> <span class="nav-text">co模块简述</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
