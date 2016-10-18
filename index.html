@@ -248,6 +248,120 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/18/让display-none元素显示并执行动画/" itemprop="url">
+                  让display:none元素显示并执行动画
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-18T11:03:11+08:00" content="2016-10-18">
+              2016-10-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端技巧/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技巧</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="让display-none元素显示并执行动画"><a href="#让display-none元素显示并执行动画" class="headerlink" title="让display:none元素显示并执行动画"></a>让display:none元素显示并执行动画</h1><h2 id="先上解决方案"><a href="#先上解决方案" class="headerlink" title="先上解决方案"></a>先上解决方案</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> trigger = <span class="built_in">document</span>.querySelector(<span class="string">".j-trigger"</span>);</div><div class="line"><span class="keyword">var</span> target = <span class="built_in">document</span>.querySelector(<span class="string">"#target"</span>);</div><div class="line">trigger.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    target.style.display = <span class="literal">null</span>;</div><div class="line">    target.classList.add(<span class="string">"expand-enter"</span>);</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        target.classList.remove(<span class="string">"expand-enter"</span>);</div><div class="line">    &#125;,<span class="number">0</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>先把display:none这个属性删除掉，并在同时添加要覆盖的属性.expand-enter，如果紧接着删除.expand-enter的话，动画是不会触发的，只有在执行栈末尾进行删除才行，原因描述不清。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/27/yield与co-异步编程解决方案/" itemprop="url">
                   yield与co,异步编程解决方案
                 </a>
@@ -1099,7 +1213,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
