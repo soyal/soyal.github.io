@@ -248,6 +248,121 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/13/自定义事件/" itemprop="url">
+                  自定义事件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-13T10:16:21+08:00" content="2016-11-13">
+              2016-11-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端技巧/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技巧</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h1><h2 id="本文内容"><a href="#本文内容" class="headerlink" title="本文内容"></a>本文内容</h2><p>本次主要实现一个功能，子dom发出一个自定义事件，父dom捕获该事件并作输出<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child = <span class="built_in">document</span>.querySelector(<span class="string">"#child"</span>);</div><div class="line"><span class="keyword">var</span> parent = <span class="built_in">document</span>.querySelector(<span class="string">"#parent"</span>);</div><div class="line"></div><div class="line">watch(parent,<span class="string">"hello"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"hello child"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">dispatch(child,<span class="string">"hello"</span>);</div></pre></td></tr></table></figure></p>
+<h2 id="watch函数实现"><a href="#watch函数实现" class="headerlink" title="watch函数实现"></a>watch函数实现</h2><p>watch函数非常简单，只用做事件的监听即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//监听事件</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">watch</span>(<span class="params">dom, name, fn</span>) </span>&#123;</div><div class="line"></div><div class="line">    dom.addEventListener(name, fn, <span class="literal">false</span>);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="dispatch函数的实现"><a href="#dispatch函数的实现" class="headerlink" title="dispatch函数的实现"></a>dispatch函数的实现</h2><p>dispatch函数功能为派发一个事件，需要用到原生的Event对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//派发事件的函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dispatch</span>(<span class="params">dom,name</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> event = <span class="keyword">new</span> Event(name , &#123;</div><div class="line">        bubbles : <span class="literal">true</span>,</div><div class="line">        cancelable : <span class="literal">true</span></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    dom.dispatchEvent(event);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/18/让display-none元素显示并执行动画/" itemprop="url">
                   让display:none元素显示并执行动画
                 </a>
@@ -311,7 +426,7 @@
       
         
           
-            <h1 id="让display-none元素显示并执行动画"><a href="#让display-none元素显示并执行动画" class="headerlink" title="让display:none元素显示并执行动画"></a>让display:none元素显示并执行动画</h1><h2 id="先上解决方案"><a href="#先上解决方案" class="headerlink" title="先上解决方案"></a>先上解决方案</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-class">.expand-transition</span>&#123;</div><div class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">        <span class="attribute">background-color</span>: <span class="number">#53a</span>;</div><div class="line">        <span class="attribute">transition</span>: all <span class="number">0.3s</span> ease;</div><div class="line">        <span class="attribute">overflow</span>: hidden;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.expand-leave</span>,<span class="selector-class">.expand-enter</span>&#123;</div><div class="line">        <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">        <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"target"</span> <span class="attr">class</span>=<span class="string">"expand-transition"</span>  <span class="attr">style</span>=<span class="string">"display:none;"</span>&gt;</span>111<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"j-trigger"</span>&gt;</span>trigger<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> trigger = <span class="built_in">document</span>.querySelector(<span class="string">".j-trigger"</span>);</div><div class="line">    <span class="keyword">var</span> target = <span class="built_in">document</span>.querySelector(<span class="string">"#target"</span>);</div><div class="line">    trigger.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">        target.style.display = <span class="literal">null</span>;</div><div class="line">        target.classList.add(<span class="string">"expand-enter"</span>);</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            target.classList.remove(<span class="string">"expand-enter"</span>);</div><div class="line">        &#125;,<span class="number">0</span>);</div><div class="line">    &#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+            <h1 id="让display-none元素显示并执行动画"><a href="#让display-none元素显示并执行动画" class="headerlink" title="让display:none元素显示并执行动画"></a>让display:none元素显示并执行动画</h1><h2 id="先上解决方案"><a href="#先上解决方案" class="headerlink" title="先上解决方案"></a>先上解决方案</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">    .expand-transition&#123;</div><div class="line">        width: 100px;</div><div class="line">        height: 100px;</div><div class="line">        background-color: #53a;</div><div class="line">        transition: all 0.3s ease;</div><div class="line">        overflow: hidden;</div><div class="line">    &#125;</div><div class="line">    .expand-leave,.expand-enter&#123;</div><div class="line">        width: 0;</div><div class="line">        height: 0;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"target"</span> <span class="attr">class</span>=<span class="string">"expand-transition"</span>  <span class="attr">style</span>=<span class="string">"display:none;"</span>&gt;</span>111<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"j-trigger"</span>&gt;</span>trigger<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> trigger = <span class="built_in">document</span>.querySelector(<span class="string">".j-trigger"</span>);</div><div class="line">    <span class="keyword">var</span> target = <span class="built_in">document</span>.querySelector(<span class="string">"#target"</span>);</div><div class="line">    trigger.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">        target.style.display = <span class="literal">null</span>;</div><div class="line">        target.classList.add(<span class="string">"expand-enter"</span>);</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            target.classList.remove(<span class="string">"expand-enter"</span>);</div><div class="line">        &#125;,<span class="number">0</span>);</div><div class="line">    &#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>这种方案类似于vue的解决方案 </p>
 <p>先把display:none这个属性删除掉，并在同时添加要覆盖的属性.expand-enter，如果紧接着删除.expand-enter的话，动画是不会触发的，只有在执行栈末尾进行删除才行，原因描述不清。</p>
 
@@ -1214,7 +1329,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

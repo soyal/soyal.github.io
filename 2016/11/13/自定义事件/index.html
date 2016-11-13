@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nodejs,javascript," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="yield与co,异步编程解决方案yield简述yield是es6中新出现的东西，对JS来说可能是新鲜货，但是在其他语言中貌似已经被用烂了。简单来说,yield就是类似函数执行时候的断点，每次函数执行到yield关键字的时候就会卡住，只有调用next方法后，函数才会继续执行，并且next会返回一个对象，包含了一个value和一个done，指示函数是否执行完毕，并返回yield后面的值。上栗子。12">
+<meta name="description" content="自定义事件本文内容本次主要实现一个功能，子dom发出一个自定义事件，父dom捕获该事件并作输出12345678var child = document.querySelector(&quot;#child&quot;);var parent = document.querySelector(&quot;#parent&quot;);watch(parent,&quot;hello&quot;,function()&amp;#123;    alert(&quot;hello">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yield与co,异步编程解决方案">
-<meta property="og:url" content="http://yoursite.com/2016/09/27/yield与co-异步编程解决方案/index.html">
+<meta property="og:title" content="自定义事件">
+<meta property="og:url" content="http://yoursite.com/2016/11/13/自定义事件/index.html">
 <meta property="og:site_name" content="Show me Code">
-<meta property="og:description" content="yield与co,异步编程解决方案yield简述yield是es6中新出现的东西，对JS来说可能是新鲜货，但是在其他语言中貌似已经被用烂了。简单来说,yield就是类似函数执行时候的断点，每次函数执行到yield关键字的时候就会卡住，只有调用next方法后，函数才会继续执行，并且next会返回一个对象，包含了一个value和一个done，指示函数是否执行完毕，并返回yield后面的值。上栗子。12">
-<meta property="og:updated_time" content="2016-09-27T13:07:45.797Z">
+<meta property="og:description" content="自定义事件本文内容本次主要实现一个功能，子dom发出一个自定义事件，父dom捕获该事件并作输出12345678var child = document.querySelector(&quot;#child&quot;);var parent = document.querySelector(&quot;#parent&quot;);watch(parent,&quot;hello&quot;,function()&amp;#123;    alert(&quot;hello">
+<meta property="og:updated_time" content="2016-11-13T02:23:50.613Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yield与co,异步编程解决方案">
-<meta name="twitter:description" content="yield与co,异步编程解决方案yield简述yield是es6中新出现的东西，对JS来说可能是新鲜货，但是在其他语言中貌似已经被用烂了。简单来说,yield就是类似函数执行时候的断点，每次函数执行到yield关键字的时候就会卡住，只有调用next方法后，函数才会继续执行，并且next会返回一个对象，包含了一个value和一个done，指示函数是否执行完毕，并返回yield后面的值。上栗子。12">
+<meta name="twitter:title" content="自定义事件">
+<meta name="twitter:description" content="自定义事件本文内容本次主要实现一个功能，子dom发出一个自定义事件，父dom捕获该事件并作输出12345678var child = document.querySelector(&quot;#child&quot;);var parent = document.querySelector(&quot;#parent&quot;);watch(parent,&quot;hello&quot;,function()&amp;#123;    alert(&quot;hello">
 
 
 
@@ -114,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/27/yield与co-异步编程解决方案/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/13/自定义事件/"/>
 
-  <title> yield与co,异步编程解决方案 | Show me Code </title>
+  <title> 自定义事件 | Show me Code </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -246,7 +246,7 @@
             
             
               
-                yield与co,异步编程解决方案
+                自定义事件
               
             
           </h1>
@@ -258,8 +258,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-27T20:41:39+08:00" content="2016-09-27">
-              2016-09-27
+            <time itemprop="dateCreated" datetime="2016-11-13T10:16:21+08:00" content="2016-11-13">
+              2016-11-13
             </time>
           </span>
 
@@ -272,8 +272,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端知识点/" itemprop="url" rel="index">
-                    <span itemprop="name">前端知识点</span>
+                  <a href="/categories/前端技巧/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技巧</span>
                   </a>
                 </span>
 
@@ -305,11 +305,9 @@
       
 
       
-        <h1 id="yield与co-异步编程解决方案"><a href="#yield与co-异步编程解决方案" class="headerlink" title="yield与co,异步编程解决方案"></a>yield与co,异步编程解决方案</h1><h2 id="yield简述"><a href="#yield简述" class="headerlink" title="yield简述"></a>yield简述</h2><p>yield是es6中新出现的东西，对JS来说可能是新鲜货，但是在其他语言中貌似已经被用烂了。<br>简单来说,yield就是类似函数执行时候的断点，每次函数执行到yield关键字的时候就会卡住，只有调用next方法后，函数才会继续执行，并且next会返回一个对象，包含了一个value和一个done，指示函数是否执行完毕，并返回yield后面的值。<br>上栗子。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">yield</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">yield</span> <span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">3</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> it = test();</div><div class="line">it.next();  <span class="comment">//&#123;value:1,done:false&#125;</span></div><div class="line">it.next();  <span class="comment">//&#123;value:2,done:false&#125;</span></div><div class="line">it.next();  <span class="comment">//&#123;value:3,done:true&#125;</span></div></pre></td></tr></table></figure></p>
-<p>如果在next中传值，传入的值会被当做上一个yield的返回值，举例<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">test2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="keyword">yield</span> <span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> it = test2();</div><div class="line">it.next().value;  <span class="comment">//2</span></div><div class="line">it.next(<span class="number">99</span>).value;    <span class="comment">//99</span></div></pre></td></tr></table></figure></p>
-<p>不过，这次yield并不是我们要讲的主角，我们的主角是下面这位同学。</p>
-<h2 id="co模块简述"><a href="#co模块简述" class="headerlink" title="co模块简述"></a>co模块简述</h2><p>co是基于yield的一个node模块，利用yield每次next都会弹出一个值的特性，实现了一套异步编程解决方案，原理性代码展示如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">co</span>(<span class="params">gen</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> it = gen();</div><div class="line">    <span class="keyword">var</span> next = it.next();</div><div class="line">    next.value.then(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">        it.next(val);    </div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>可以看出，原理并不复杂，就是让yield next弹出一个Promise，然后在这个promise的异步操作完成后再次next，让函数继续向下执行，这样，我们在编写程序的时候就可以实现异步逻辑，同步实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">xx</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> result1 = <span class="keyword">yield</span> <span class="built_in">Promise</span>.resolve(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//异步操作1</span></div><div class="line">    &#125;);</div><div class="line">    <span class="keyword">var</span> result2 = result1 * <span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> result2;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <h1 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h1><h2 id="本文内容"><a href="#本文内容" class="headerlink" title="本文内容"></a>本文内容</h2><p>本次主要实现一个功能，子dom发出一个自定义事件，父dom捕获该事件并作输出<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child = <span class="built_in">document</span>.querySelector(<span class="string">"#child"</span>);</div><div class="line"><span class="keyword">var</span> parent = <span class="built_in">document</span>.querySelector(<span class="string">"#parent"</span>);</div><div class="line"></div><div class="line">watch(parent,<span class="string">"hello"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"hello child"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">dispatch(child,<span class="string">"hello"</span>);</div></pre></td></tr></table></figure></p>
+<h2 id="watch函数实现"><a href="#watch函数实现" class="headerlink" title="watch函数实现"></a>watch函数实现</h2><p>watch函数非常简单，只用做事件的监听即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//监听事件</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">watch</span>(<span class="params">dom, name, fn</span>) </span>&#123;</div><div class="line"></div><div class="line">    dom.addEventListener(name, fn, <span class="literal">false</span>);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="dispatch函数的实现"><a href="#dispatch函数的实现" class="headerlink" title="dispatch函数的实现"></a>dispatch函数的实现</h2><p>dispatch函数功能为派发一个事件，需要用到原生的Event对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//派发事件的函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dispatch</span>(<span class="params">dom,name</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> event = <span class="keyword">new</span> Event(name , &#123;</div><div class="line">        bubbles : <span class="literal">true</span>,</div><div class="line">        cancelable : <span class="literal">true</span></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    dom.dispatchEvent(event);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -332,8 +330,6 @@
       
         <div class="post-tags">
           
-            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
-          
             <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
@@ -343,17 +339,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/14/编写chrome插件/" rel="next" title="编写chrome插件">
-                <i class="fa fa-chevron-left"></i> 编写chrome插件
+              <a href="/2016/10/18/让display-none元素显示并执行动画/" rel="next" title="让display:none元素显示并执行动画">
+                <i class="fa fa-chevron-left"></i> 让display:none元素显示并执行动画
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/18/让display-none元素显示并执行动画/" rel="prev" title="让display:none元素显示并执行动画">
-                让display:none元素显示并执行动画 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,7 +459,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#yield与co-异步编程解决方案"><span class="nav-number">1.</span> <span class="nav-text">yield与co,异步编程解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#yield简述"><span class="nav-number">1.1.</span> <span class="nav-text">yield简述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#co模块简述"><span class="nav-number">1.2.</span> <span class="nav-text">co模块简述</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义事件"><span class="nav-number">1.</span> <span class="nav-text">自定义事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本文内容"><span class="nav-number">1.1.</span> <span class="nav-text">本文内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#watch函数实现"><span class="nav-number">1.2.</span> <span class="nav-text">watch函数实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dispatch函数的实现"><span class="nav-number">1.3.</span> <span class="nav-text">dispatch函数的实现</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
